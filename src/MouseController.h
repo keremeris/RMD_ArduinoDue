@@ -35,7 +35,7 @@ public:
   };
 
   bool getButton(MouseButton button) { return (buttons & button) == button; };
-  bool getTest() { return tinfo[10]; };
+  unit8_t[] getTest() { return tinfo[10]; };
   int getXChange();
   int getYChange();
   // int getWheelChange(); // Not implemented

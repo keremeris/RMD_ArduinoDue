@@ -27,7 +27,7 @@ void mouseDragged()  __attribute__ ((weak, alias("__mouseControllerEmptyCallback
 void mouseMoved()    __attribute__ ((weak, alias("__mouseControllerEmptyCallback")));
 void mousePressed()  __attribute__ ((weak, alias("__mouseControllerEmptyCallback")));
 void mouseReleased() __attribute__ ((weak, alias("__mouseControllerEmptyCallback")));
-
+void tested() __attribute__ ((weak, alias("__mouseControllerEmptyCallback")));
 int MouseController::getXChange() {
 	int r = dx;
 	dx = 0;
@@ -84,5 +84,6 @@ void MouseController::OnRightButtonDown(MOUSEINFO *mi) {
 void MouseController::TestFunction(TESTINFO *ti) {
 	for (unit8_t i=0;i<10;i++)
 		tinfo[i] = ti[i];
+	tested();
 }
 

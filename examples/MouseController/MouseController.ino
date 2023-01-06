@@ -25,7 +25,10 @@ MouseController mouse(usb);
 boolean leftButton = false;
 boolean middleButton = false;
 boolean rightButton = false;
-
+void tested(){
+  Serial.print("TEST: \r\n");
+  Serial.print(mouse.getTest());
+}
 // This function intercepts mouse movements
 void mouseMoved() {
   Serial.print("Move: ");
