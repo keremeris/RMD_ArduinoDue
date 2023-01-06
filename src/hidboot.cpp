@@ -29,10 +29,11 @@ void MouseReportParser::Parse(HID *hid, bool is_rpt_id, uint32_t len, uint8_t *b
 {
 	MOUSEINFO *pmi = (MOUSEINFO*)buf;
     TESTINFO *pTest = (TESTINFO*)buf;
+	TestFunction(pTest);
 	if (prevState.mouseInfo.bmLeftButton == 0 && pmi->bmLeftButton == 1)
 	{
 		OnLeftButtonDown(pmi);
-		TestFunction(pTest);
+		
 	}
 	if (prevState.mouseInfo.bmLeftButton == 1 && pmi->bmLeftButton == 0)
 		OnLeftButtonUp(pmi);
