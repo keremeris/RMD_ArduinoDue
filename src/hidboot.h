@@ -48,7 +48,7 @@ struct MOUSEINFO
 };
 struct TESTINFO
 {
-	unit8_t hidInfo[10];
+	uint8_t hidInfo[10];
 };
 
 /**
@@ -73,7 +73,7 @@ protected:
 	virtual void OnRightButtonDown	(MOUSEINFO *mi)	{};
 	virtual void OnMiddleButtonUp	(MOUSEINFO *mi)	{};
 	virtual void OnMiddleButtonDown	(MOUSEINFO *mi)	{};
-	virtual void TestFunction       (TESTINFO *ti){};
+	virtual void TestFunction       (TESTINFO  *ti)  {};
 };
 
 /**

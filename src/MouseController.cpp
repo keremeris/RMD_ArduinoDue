@@ -81,9 +81,11 @@ void MouseController::OnRightButtonDown(MOUSEINFO *mi) {
 	buttons |= RIGHT_BUTTON;
 	mousePressed();
 }
+
 void MouseController::TestFunction(TESTINFO *ti) {
-	for (unit8_t i=0;i<10;i++)
-		tinfo[i] = ti[i];
+	for (uint8_t i=0;i<10;i++)
+		tinfo[i] = ti->hidInfo[i];
 	tested();
 }
+
 

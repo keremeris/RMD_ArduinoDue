@@ -35,7 +35,7 @@ public:
   };
 
   bool getButton(MouseButton button) { return (buttons & button) == button; };
-  unit8_t[] getTest() { return tinfo[10]; };
+  uint8_t getTest() { return tinfo[4]; };
   int getXChange();
   int getYChange();
   // int getWheelChange(); // Not implemented
@@ -47,7 +47,6 @@ protected:
   virtual void OnMiddleButtonUp(MOUSEINFO *mi);
   virtual void OnMiddleButtonDown(MOUSEINFO *mi);
   virtual void OnRightButtonUp(MOUSEINFO *mi);
-  virtual void OnRightButtonDown(MOUSEINFO *mi);
   virtual void OnRightButtonDown(MOUSEINFO *mi);
   virtual void TestFunction(TESTINFO *ti);
 private:
