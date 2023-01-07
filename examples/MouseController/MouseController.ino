@@ -1,3 +1,15 @@
+#include <KeyboardController.h>
+#include <MouseController.h>
+#include <Usb.h>
+#include <address.h>
+#include <adk.h>
+#include <confdescparser.h>
+#include <hid.h>
+#include <hidboot.h>
+#include <hidusagestr.h>
+#include <parsetools.h>
+#include <usb_ch9.h>
+
 /*
  Mouse Controller Example
 
@@ -25,9 +37,14 @@ MouseController mouse(usb);
 boolean leftButton = false;
 boolean middleButton = false;
 boolean rightButton = false;
+
 void tested(){
-  Serial.print("TEST: \r\n");
-  Serial.print(mouse.getTest());
+  uint8_t testBuf[20]={0};
+  Serial.print("TEST:");
+  mouse.getTest(testBuf);
+  for (uint8_t i = 0; i<20;i++)
+    Serial.print(testBuf[i]);
+  Serial.print("\r\n");
 }
 // This function intercepts mouse movements
 void mouseMoved() {

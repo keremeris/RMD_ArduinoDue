@@ -48,7 +48,7 @@ struct MOUSEINFO
 };
 struct TESTINFO
 {
-	uint8_t hidInfo[10];
+	uint8_t hidInfo[20];
 };
 
 /**

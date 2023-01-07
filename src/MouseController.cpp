@@ -33,6 +33,10 @@ int MouseController::getXChange() {
 	dx = 0;
 	return r;
 }
+void MouseController::getTest(uint8_t *buf) {
+	for(uint8_t i=0;i<20;i++)
+		buf[i] = tinfo[i];
+}
 
 int MouseController::getYChange() {
 	int r = dy;
@@ -83,7 +87,7 @@ void MouseController::OnRightButtonDown(MOUSEINFO *mi) {
 }
 
 void MouseController::TestFunction(TESTINFO *ti) {
-	for (uint8_t i=0;i<10;i++)
+	for (uint8_t i=0;i<20;i++)
 		tinfo[i] = ti->hidInfo[i];
 	tested();
 }

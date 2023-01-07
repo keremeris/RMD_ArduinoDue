@@ -35,7 +35,7 @@ public:
   };
 
   bool getButton(MouseButton button) { return (buttons & button) == button; };
-  uint8_t getTest() { return tinfo[4]; };
+  void getTest(uint8_t *buf);
   int getXChange();
   int getYChange();
   // int getWheelChange(); // Not implemented
@@ -53,7 +53,7 @@ private:
   HIDBoot<HID_PROTOCOL_MOUSE> hostMouse;
   int dx, dy;
   int buttons;
-  uint8_t tinfo[10];
+  uint8_t tinfo[20];
 };
 
 #endif
